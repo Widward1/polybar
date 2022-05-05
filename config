@@ -170,7 +170,7 @@ type = internal/bspwm
 pin-workspaces = true
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.background}
 label-focused-underline= ${colors.green}
 label-focused-padding = 1
 
@@ -182,7 +182,7 @@ label-urgent-background = ${colors.magenta}
 label-urgent-padding = 1
 
 label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.background-alt}
 label-empty-padding = 1
 
 ; Separator in between workspaces
