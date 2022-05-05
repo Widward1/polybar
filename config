@@ -63,7 +63,7 @@ font-3 = Font Awesome 6 Free Solid:style=Solid:size=10;2
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = pulseaudio date wlan powermenu 
+modules-right = pulseaudio date wlan 
 
 tray-position = right
 tray-padding = 2
@@ -115,7 +115,7 @@ font-3 = Font Awesome 6 Free Solid:style=Solid:size=10;2
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = pulseaudio date wlan powermenu 
+modules-right = pulseaudio date wlan 
 
 tray-position = right
 tray-padding = 2
@@ -246,11 +246,11 @@ interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
 format-connected =  <label-connected>
-format-connected-underline = ${colors.cyan} 
+format-connected-underline = ${colors.blue} 
 label-connected = on
 
 format-disconnected =  <label-disconnected>
-format-disconnected-underline = ${self.cyan}
+format-disconnected-underline = ${self.blue}
 label-disconnected = off
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
