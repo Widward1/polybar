@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cc
+background = #dd1c2023
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -72,7 +72,7 @@ tray-padding = 2
 wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -124,7 +124,7 @@ tray-padding = 2
 wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -297,7 +297,8 @@ label = %date% %time%
 type = internal/pulseaudio
 format-underline = ${colors.cyan}
 
-format-volume = <label-volume> <bar-volume>
+;format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
