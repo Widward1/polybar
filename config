@@ -37,9 +37,9 @@ background-alt = #cf5290
 
 
 [bar/mybar1]
-monitor = ${env:MONITOR:DP-4}
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 25
+height = 23
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -68,59 +68,7 @@ font-3 = Font Awesome 6 Free Solid:style=Solid:size=10;1
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = pulseaudio date wlan 
-
-;tray-position = right
-;tray-padding = 2
-;tray-background = #0063ff
-
-wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/mybar2]
-monitor = ${env:MONITOR:HDMI-0}
-width = 100%
-height = 25
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
-fixed-center = true
-bottom = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 0
-padding-right = 1
-
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = terminus:pixelsize=14;1
-font-1 = terminus:fontformat=truetype:size=12:antialias=false;1
-font-2 = Font Awesome 6 Free Regular:style=Regular:size=10;1
-font-3 = Font Awesome 6 Free Solid:style=Solid:size=10;1
-
-modules-left = bspwm
-modules-center = xwindow
-modules-right = pulseaudio date wlan 
+modules-right = pulseaudio date wlan battery1 battery2
 
 ;tray-position = right
 ;tray-padding = 2
@@ -361,36 +309,70 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery]
+[module/battery1]
 type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.background}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = ${colors.background}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 =  
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.green}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.green}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+
+[module/battery2]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${self.background-alt}
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.background-alt}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.background-alt}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.green}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
